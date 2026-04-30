@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Gaming Setups — Design Your Dream Setup</title>
+  <meta name="description" content="Custom gaming room and setup interior design. Stop guessing. Start designing like a pro." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Orbitron (display) + Rajdhani (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    // Tailwind custom config
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+          },
+          colors: {
+            neon: {
+              blue: '#00d4ff',
+              purple: '#a855f7',
+              pink: '#ff00ff',
+              green: '#00ff88',
+            },
+            dark: {
+              900: '#030712',
+              800: '#0a0f1e',
+              700: '#0d1428',
+              600: '#111827',
+              500: '#1a2235',
+            }
+          },
+          animation: {
+            'glow-pulse': 'glowPulse 3s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'scanline': 'scanline 8s linear infinite',
+            'rgb-shift': 'rgbShift 4s linear infinite',
+            'counter': 'counter 0.5s ease-out',
+          },
+          boxShadow: {
+            'neon-blue': '0 0 20px rgba(0,212,255,0.5), 0 0 60px rgba(0,212,255,0.2)',
+            'neon-purple': '0 0 20px rgba(168,85,247,0.5), 0 0 60px rgba(168,85,247,0.2)',
+            'neon-pink': '0 0 20px rgba(255,0,255,0.4), 0 0 60px rgba(255,0,255,0.15)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ===== GLOBAL STYLES ===== */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background-color: #030712;
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0a0f1e; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(#00d4ff, #a855f7); border-radius: 3px; }
+
+    /* ===== FONTS ===== */
+    .font-display { font-family: 'Orbitron', sans-serif; }
+    .font-body { font-family: 'Rajdhani', sans-serif; }
+
+    /* ===== KEYFRAMES ===== */
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(0,212,255,0.4), 0 0 60px rgba(0,212,255,0.15); }
+      50% { box-shadow: 0 0 40px rgba(0,212,255,0.7), 0 0 100px rgba(0,212,255,0.3); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100vh); }
+    }
+    @keyframes rgbShift {
+      0% { color: #00d4ff; text-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff; }
+      33% { color: #a855f7; text-shadow: 0 0 20px #a855f7, 0 0 40px #a855f7; }
+      66% { color: #ff00ff; text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff; }
+      100% { color: #00d4ff; text-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes gridMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 60px 60px; }
+    }
+    @keyframes borderGlow {
+      0%, 100% { border-color: rgba(0,212,255,0.4); box-shadow: 0 0 10px rgba(0,212,255,0.2); }
+      50% { border-color: rgba(168,85,247,0.6); box-shadow: 0 0 20px rgba(168,85,247,0.3); }
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    /* ===== HERO GRID BG ===== */
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridMove 20s linear infinite;
+    }
+
+    /* ===== GLOW TEXT ===== */
+    .glow-blue { color: #00d4ff; text-shadow: 0 0 20px rgba(0,212,255,0.8), 0 0 40px rgba(0,212,255,0.4); }
+    .glow-purple { color: #a855f7; text-shadow: 0 0 20px rgba(168,85,247,0.8), 0 0 40px rgba(168,85,247,0.4); }
+    .glow-pink { color: #ff00ff; text-shadow: 0 0 20px rgba(255,0,255,0.8), 0 0 40px rgba(255,0,255,0.4); }
+    .rgb-text { animation: rgbShift 4s linear infinite; }
+
+    /* ===== NEON BORDERS ===== */
+    .border-neon-blue { border-color: #00d4ff; box-shadow: 0 0 10px rgba(0,212,255,0.3), inset 0 0 10px rgba(0,212,255,0.05); }
+    .border-neon-purple { border-color: #a855f7; box-shadow: 0 0 10px rgba(168,85,247,0.3), inset 0 0 10px rgba(168,85,247,0.05); }
+    .border-anim { animation: borderGlow 3s ease-in-out infinite; }
+
+    /* ===== PREMIUM BUTTONS ===== */
+    .btn-primary {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #00d4ff, #a855f7);
+      color: #030712; font-family: 'Orbitron', sans-serif;
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em;
+      padding: 14px 32px; border-radius: 4px;
+      text-transform: uppercase; cursor: pointer; border: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(0,212,255,0.4), 0 0 60px rgba(0,212,255,0.15);
+    }
+    .btn-primary::before {
+      content: ''; position: absolute; top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      transition: left 0.5s ease;
+    }
+    .btn-primary:hover::before { left: 100%; }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(0,212,255,0.7), 0 0 100px rgba(0,212,255,0.3);
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(0,212,255,0.5);
+      color: #00d4ff; font-family: 'Orbitron', sans-serif;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em;
+      padding: 13px 32px; border-radius: 4px;
+      text-transform: uppercase; cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background: rgba(0,212,255,0.08);
+      border-color: #00d4ff;
+      box-shadow: 0 0 20px rgba(0,212,255,0.3);
+      transform: translateY(-2px);
+    }
+    .btn-wa {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white; font-family: 'Orbitron', sans-serif;
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em;
+      padding: 16px 36px; border-radius: 4px;
+      text-transform: uppercase; cursor: pointer; border: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(37,211,102,0.4);
+    }
+    .btn-wa:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 40px rgba(37,211,102,0.6), 0 8px 30px rgba(0,0,0,0.4);
+    }
+
+    /* ===== CARDS ===== */
+    .glass-card {
+      background: rgba(13,20,40,0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0,212,255,0.12);
+      border-radius: 8px;
+      transition: all 0.4s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(0,212,255,0.35);
+      box-shadow: 0 0 30px rgba(0,212,255,0.1), 0 20px 60px rgba(0,0,0,0.4);
+      transform: translateY(-4px);
+    }
+
+    /* ===== REVEAL ANIMATIONS ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== LOADING SCREEN ===== */
+    #loader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: #030712;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+    #loader.hidden { opacity: 0; visibility: hidden; }
+    .loader-bar {
+      width: 200px; height: 2px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px; overflow: hidden;
+      margin-top: 20px;
+    }
+    .loader-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #00d4ff, #a855f7, #ff00ff);
+      width: 0%;
+      transition: width 1.5s ease;
+      border-radius: 2px;
+    }
+
+    /* ===== NAV ===== */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(3,7,18,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,212,255,0.08);
+      transition: all 0.3s ease;
+    }
+    #navbar.scrolled {
+      border-bottom-color: rgba(0,212,255,0.2);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    }
+
+    /* ===== ROOM BUILDER ===== */
+    #room-canvas {
+      background: linear-gradient(135deg, #0a1628 0%, #0d1f3c 50%, #0a1628 100%);
+      border: 1px solid rgba(0,212,255,0.15);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+    }
+    .room-floor {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 35%;
+      background: linear-gradient(180deg, rgba(0,212,255,0.04), rgba(0,212,255,0.08));
+      border-top: 1px solid rgba(0,212,255,0.15);
+    }
+    .room-wall-left {
+      position: absolute; left: 0; top: 0; bottom: 35%;
+      width: 8%;
+      background: linear-gradient(90deg, rgba(168,85,247,0.06), transparent);
+      border-right: 1px solid rgba(168,85,247,0.08);
+    }
+    .room-item {
+      position: absolute;
+      cursor: grab;
+      user-select: none;
+      transition: filter 0.2s ease, transform 0.2s ease;
+    }
+    .room-item:hover { filter: brightness(1.3); transform: scale(1.05); }
+    .room-item:active { cursor: grabbing; }
+    .room-item .item-label {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 9px;
+      color: rgba(0,212,255,0.7);
+      text-align: center;
+      margin-top: 4px;
+      white-space: nowrap;
+    }
+    .sidebar-item {
+      background: rgba(13,20,40,0.8);
+      border: 1px solid rgba(0,212,255,0.15);
+      border-radius: 6px; padding: 10px;
+      cursor: pointer; text-align: center;
+      transition: all 0.3s ease;
+      font-family: 'Rajdhani', sans-serif;
+    }
+    .sidebar-item:hover {
+      border-color: #00d4ff;
+      background: rgba(0,212,255,0.08);
+      box-shadow: 0 0 15px rgba(0,212,255,0.2);
+      transform: translateX(4px);
+    }
+    .sidebar-item.active-cat {
+      border-color: #a855f7;
+      background: rgba(168,85,247,0.1);
+    }
+    .category-tab {
+      padding: 8px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.5);
+    }
+    .category-tab.active {
+      background: rgba(0,212,255,0.15);
+      border-color: #00d4ff;
+      color: #00d4ff;
+      box-shadow: 0 0 10px rgba(0,212,255,0.2);
+    }
+    .category-tab:hover:not(.active) {
+      border-color: rgba(0,212,255,0.3);
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ===== BUDGET PANEL ===== */
+    #budget-panel {
+      background: rgba(10,15,30,0.95);
+      border: 1px solid rgba(0,212,255,0.2);
+      border-radius: 8px;
+      padding: 24px;
+      position: sticky; top: 100px;
+      backdrop-filter: blur(20px);
+    }
+    .budget-bar {
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, #00d4ff, #a855f7);
+      transition: width 0.5s ease;
+    }
+    .budget-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.9rem;
+    }
+    .budget-total {
+      font-family: 'Orbitron', sans-serif;
+      color: #00d4ff;
+      text-shadow: 0 0 15px rgba(0,212,255,0.5);
+      transition: all 0.4s ease;
+    }
+    .price-flash {
+      animation: priceFlash 0.5s ease;
+    }
+    @keyframes priceFlash {
+      0%, 100% { color: #00d4ff; }
+      50% { color: #ff00ff; text-shadow: 0 0 30px rgba(255,0,255,0.8); }
+    }
+
+    /* ===== PORTFOLIO GRID ===== */
+    .portfolio-item {
+      position: relative; overflow: hidden; border-radius: 8px;
+      border: 1px solid rgba(0,212,255,0.1);
+      cursor: pointer;
+    }
+    .portfolio-item::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(168,85,247,0.15));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .portfolio-item:hover::after { opacity: 1; }
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; transform: translateY(0); }
+    .portfolio-overlay {
+      position: absolute; inset: 0; z-index: 10;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: rgba(3,7,18,0.85);
+      opacity: 0; transform: translateY(20px);
+      transition: all 0.4s ease;
+    }
+
+    /* ===== PACKAGE CARDS ===== */
+    .package-card {
+      background: rgba(10,15,30,0.8);
+      border: 1px solid rgba(0,212,255,0.12);
+      border-radius: 8px; padding: 40px 32px;
+      position: relative; overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    .package-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, currentColor, transparent);
+    }
+    .package-card.featured {
+      border-color: rgba(0,212,255,0.4);
+      box-shadow: 0 0 40px rgba(0,212,255,0.1);
+    }
+    .package-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonial-card {
+      background: rgba(13,20,40,0.7);
+      border: 1px solid rgba(168,85,247,0.15);
+      border-radius: 8px; padding: 28px;
+      transition: all 0.4s ease;
+    }
+    .testimonial-card:hover {
+      border-color: rgba(168,85,247,0.4);
+      box-shadow: 0 0 30px rgba(168,85,247,0.1);
+    }
+
+    /* ===== FLOATING WA ===== */
+    #wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+      cursor: pointer; transition: all 0.3s ease;
+      animation: float 6s ease-in-out infinite;
+      text-decoration: none;
+    }
+    #wa-float:hover {
+      transform: scale(1.15) translateY(-3px);
+      box-shadow: 0 8px 40px rgba(37,211,102,0.7);
+    }
+    #wa-float svg { width: 30px; height: 30px; fill: white; }
+
+    /* ===== STEPS ===== */
+    .step-line {
+      position: absolute; top: 24px; left: 50%; right: -50%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(0,212,255,0.5), rgba(0,212,255,0.05));
+    }
+
+    /* ===== MISC ===== */
+    .section-badge {
+      display: inline-block;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.65rem; letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #00d4ff;
+      border: 1px solid rgba(0,212,255,0.3);
+      padding: 6px 16px; border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #00d4ff, #a855f7, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .divider-glow {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,212,255,0.4), rgba(168,85,247,0.4), transparent);
+    }
+    .stat-number {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem; font-weight: 700;
+    }
+    input[type="range"] {
+      -webkit-appearance: none;
+      height: 4px; border-radius: 2px;
+      background: rgba(0,212,255,0.2);
+      outline: none; width: 100%;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px; height: 18px; border-radius: 50%;
+      background: linear-gradient(135deg, #00d4ff, #a855f7);
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,212,255,0.5);
+    }
+    .preset-btn {
+      padding: 8px 16px; border-radius: 4px;
+      font-family: 'Orbitron', sans-serif; font-size: 0.65rem;
+      cursor: pointer; border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.03);
+      transition: all 0.3s ease;
+    }
+    .preset-btn:hover { border-color: rgba(0,212,255,0.5); color: #00d4ff; }
+    .preset-btn.selected { border-color: #00d4ff; color: #00d4ff; background: rgba(0,212,255,0.1); }
+
+    /* Mobile menu */
+    #mobile-menu {
+      display: none;
+      position: fixed; inset: 0; z-index: 998;
+      background: rgba(3,7,18,0.97);
+      backdrop-filter: blur(20px);
+      padding-top: 80px;
+    }
+    #mobile-menu.open { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; }
+
+    /* Room grid guide */
+    .room-grid-guide {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    /* Tooltip */
+    .tooltip {
+      position: absolute; bottom: 110%; left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.9); color: #00d4ff;
+      font-family: 'Orbitron', sans-serif; font-size: 10px;
+      padding: 4px 10px; border-radius: 3px;
+      white-space: nowrap; pointer-events: none;
+      opacity: 0; transition: opacity 0.2s;
+      border: 1px solid rgba(0,212,255,0.3);
+    }
+    .sidebar-item:hover .tooltip { opacity: 1; }
+  </style>
+</head>
+<body class="bg-dark-900">
+
+<!-- ===== LOADING SCREEN ===== -->
+<div id="loader">
+  <div class="font-display text-2xl gradient-text font-bold tracking-widest">3D GAMING SETUPS</div>
+  <div class="text-sm text-gray-500 font-body tracking-widest mt-2">INITIALIZING DESIGN STUDIO...</div>
+  <div class="loader-bar mt-6">
+    <div class="loader-fill" id="loader-fill"></div>
+  </div>
+  <div class="text-xs text-gray-600 font-display mt-3 tracking-widest" id="loader-pct">0%</div>
+</div>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a id="wa-float" href="https://wa.me/6288226439743" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.003 0C7.17 0 0 7.17 0 16.003c0 2.82.74 5.47 2.03 7.77L0 32l8.43-2.01c2.22 1.18 4.75 1.86 7.44 1.86h.01C24.83 31.86 32 24.69 32 15.857 32 7.17 24.836 0 16.003 0zm0 29.14h-.01c-2.41 0-4.78-.65-6.84-1.87l-.49-.29-5.02 1.2 1.22-4.88-.32-.5A13.116 13.116 0 0 1 2.86 16c0-7.25 5.9-13.14 13.15-13.14 7.25 0 13.14 5.9 13.14 13.14 0 7.25-5.9 13.14-13.15 13.14zm7.21-9.84c-.4-.2-2.34-1.15-2.7-1.28-.36-.13-.62-.2-.88.2-.26.4-1.01 1.28-1.24 1.55-.23.27-.46.3-.86.1-.4-.2-1.69-.62-3.22-1.98-1.19-1.06-1.99-2.37-2.22-2.77-.23-.4-.02-.61.17-.81.18-.18.4-.47.6-.7.2-.23.27-.4.4-.66.13-.27.07-.5-.03-.7-.1-.2-.88-2.12-1.2-2.9-.32-.76-.64-.66-.88-.67-.23-.01-.5-.01-.76-.01-.26 0-.68.1-.1.5-.32.4-1.23 1.2-1.23 2.93s1.26 3.4 1.44 3.63c.18.23 2.48 3.79 6.01 5.31.84.36 1.5.58 2.01.74.84.27 1.61.23 2.22.14.68-.1 2.09-.85 2.38-1.67.3-.82.3-1.52.21-1.67-.09-.15-.35-.25-.74-.44z"/>
+  </svg>
+</a>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar" class="py-4 px-6 lg:px-12">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-3 group">
+      <div class="w-9 h-9 rounded border border-neon-blue flex items-center justify-center relative" style="box-shadow: 0 0 15px rgba(0,212,255,0.3);">
+        <div class="w-5 h-5 border-2 border-current" style="color: #00d4ff; transform: rotate(45deg);"></div>
+        <div class="absolute w-3 h-3 rounded" style="background: linear-gradient(135deg,#00d4ff,#a855f7);"></div>
+      </div>
+      <span class="font-display text-sm font-bold tracking-widest" style="color:#00d4ff;">3D<span class="text-white"> GAMING</span><span style="color:#a855f7;"> SETUPS</span></span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden lg:flex items-center gap-8 font-body font-semibold text-sm tracking-wide">
+      <a href="#builder" class="text-gray-400 hover:text-white transition-colors hover:glow-blue">Room Builder</a>
+      <a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">How It Works</a>
+      <a href="#packages" class="text-gray-400 hover:text-white transition-colors">Packages</a>
+      <a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a>
+      <a href="https://wa.me/6288226439743" target="_blank" class="btn-primary text-xs">Order Now</a>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="hamburger" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5" aria-label="Menu">
+      <span class="block w-6 h-0.5 bg-current transition-all duration-300" style="color:#00d4ff;"></span>
+      <span class="block w-4 h-0.5 bg-current ml-auto transition-all duration-300" style="color:#a855f7;"></span>
+      <span class="block w-6 h-0.5 bg-current transition-all duration-300" style="color:#00d4ff;"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+  <a href="#builder" onclick="closeMobileMenu()" class="font-display text-lg text-white tracking-widest hover:text-neon-blue transition-colors" style="color:#fff;">ROOM BUILDER</a>
+  <a href="#how-it-works" onclick="closeMobileMenu()" class="font-display text-lg tracking-widest" style="color:#fff;">HOW IT WORKS</a>
+  <a href="#packages" onclick="closeMobileMenu()" class="font-display text-lg tracking-widest" style="color:#fff;">PACKAGES</a>
+  <a href="#portfolio" onclick="closeMobileMenu()" class="font-display text-lg tracking-widest" style="color:#fff;">PORTFOLIO</a>
+  <a href="https://wa.me/6288226439743" target="_blank" class="btn-primary mt-4">ORDER NOW</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden hero-grid">
+  <!-- Glow orbs -->
+  <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%); filter: blur(40px);"></div>
+  <div class="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%); filter: blur(40px);"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,0,255,0.03) 0%, transparent 70%); filter: blur(60px);"></div>
+
+  <!-- Scanline effect -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+    <div style="width:100%;height:2px;background:linear-gradient(90deg,transparent,rgba(0,212,255,0.5),transparent);animation:scanline 8s linear infinite;position:absolute;"></div>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 text-center" style="animation: fadeInUp 1s ease 0.5s both;">
+    <!-- Eyebrow -->
+    <div class="section-badge mb-8" style="animation: fadeInUp 0.8s ease 0.8s both;">
+      ⚡ Premium Gaming Interior Design Studio
+    </div>
+
+    <!-- Headline -->
+    <h1 class="font-display font-black mb-6 leading-tight" style="font-size: clamp(2.2rem, 6vw, 5rem); animation: fadeInUp 0.8s ease 1s both;">
+      Stop Guessing Your Setup.<br />
+      <span class="gradient-text">Start Designing It</span><br />
+      Like A Pro.
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="font-body text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed" style="font-size: clamp(1rem, 2vw, 1.25rem); animation: fadeInUp 0.8s ease 1.2s both;">
+      We transform any room into a <span class="text-white font-semibold">cinematic, high-performance gaming space</span> — designed specifically for you, your budget, and your vision. No guesswork. No regrets. Just your dream setup, built right the first time.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-wrap items-center justify-center gap-4" style="animation: fadeInUp 0.8s ease 1.4s both;">
+      <a href="#builder" class="btn-primary">🎮 Start Designing</a>
+      <a href="https://wa.me/6288226439743" target="_blank" class="btn-secondary">Order Custom Setup →</a>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto" style="animation: fadeInUp 0.8s ease 1.6s both;">
+      <div class="text-center">
+        <div class="stat-number glow-blue">500+</div>
+        <div class="text-xs font-display text-gray-500 tracking-widest mt-1">SETUPS DESIGNED</div>
+      </div>
+      <div class="text-center" style="border-left:1px solid rgba(255,255,255,0.08);border-right:1px solid rgba(255,255,255,0.08);">
+        <div class="stat-number glow-purple">98%</div>
+        <div class="text-xs font-display text-gray-500 tracking-widest mt-1">CLIENT SATISFACTION</div>
+      </div>
+      <div class="text-center">
+        <div class="stat-number" style="font-family:'Orbitron',sans-serif;font-size:2.5rem;font-weight:700;color:#ff00ff;text-shadow:0 0 20px rgba(255,0,255,0.6);">3D</div>
+        <div class="text-xs font-display text-gray-500 tracking-widest mt-1">RENDER QUALITY</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style="animation: float 3s ease-in-out infinite;">
+    <div class="text-xs font-display text-gray-600 tracking-widest">SCROLL</div>
+    <div class="w-px h-8" style="background: linear-gradient(180deg, #00d4ff, transparent);"></div>
+  </div>
+</section>
+
+<!-- ===== DIVIDER ===== -->
+<div class="divider-glow"></div>
+
+<!-- ===== ROOM BUILDER + BUDGET ===== -->
+<section id="builder" class="py-24 px-6 lg:px-12">
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12 reveal">
+      <div class="section-badge">🏗️ Interactive Room Builder</div>
+      <h2 class="font-display font-bold mb-4" style="font-size: clamp(1.8rem, 4vw, 3rem);">
+        Build Your <span class="gradient-text">Dream Room</span>
+      </h2>
+      <p class="text-gray-400 max-w-xl mx-auto font-body text-lg">Drag and drop items, configure your space, and watch your budget update in real time.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-4 gap-6">
+      <!-- SIDEBAR: Categories + Items -->
+      <div class="lg:col-span-1 space-y-4">
+        <!-- Category tabs -->
+        <div class="font-display text-xs text-gray-500 tracking-widest mb-3">CATEGORIES</div>
+        <div class="flex flex-row lg:flex-col gap-2 flex-wrap" id="category-tabs">
+          <button class="category-tab active" data-cat="desk">🖥️ Desk</button>
+          <button class="category-tab" data-cat="chair">💺 Chair</button>
+          <button class="category-tab" data-cat="monitor">🖥 Monitor</button>
+          <button class="category-tab" data-cat="lighting">💡 Lighting</button>
+          <button class="category-tab" data-cat="accessories">🎮 Accessories</button>
+        </div>
+
+        <!-- Items List -->
+        <div id="items-list" class="space-y-2 mt-4"></div>
+
+        <!-- Room Dimensions -->
+        <div class="glass-card p-4 mt-4">
+          <div class="font-display text-xs text-gray-500 tracking-widest mb-4">ROOM SIZE</div>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400 font-body">Width</span><span class="text-white font-display text-xs" id="val-w">4m</span></div>
+              <input type="range" id="slider-w" min="2" max="8" value="4" step="0.5" />
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400 font-body">Length</span><span class="text-white font-display text-xs" id="val-l">5m</span></div>
+              <input type="range" id="slider-l" min="2" max="10" value="5" step="0.5" />
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400 font-body">Height</span><span class="text-white font-display text-xs" id="val-h">2.8m</span></div>
+              <input type="range" id="slider-h" min="2.4" max="4" value="2.8" step="0.1" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CANVAS -->
+      <div class="lg:col-span-2">
+        <div id="room-canvas" style="height: 460px;">
+          <div class="room-grid-guide"></div>
+          <div class="room-floor"></div>
+          <div class="room-wall-left"></div>
+
+          <!-- Corner marker -->
+          <div class="absolute top-3 left-3 font-display text-xs" style="color:rgba(0,212,255,0.3); font-size:9px;">TOP VIEW</div>
+          <div class="absolute top-3 right-3 font-display text-xs" id="room-size-label" style="color:rgba(0,212,255,0.3); font-size:9px;">4m × 5m × 2.8m</div>
+
+          <!-- Drop zone hint -->
+          <div id="canvas-hint" class="absolute inset-0 flex items-center justify-center" style="pointer-events:none;">
+            <div class="text-center opacity-30">
+              <div class="text-4xl mb-3">🎮</div>
+              <div class="font-display text-xs tracking-widest" style="color:#00d4ff;">CLICK ITEMS TO ADD</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Canvas controls -->
+        <div class="flex gap-3 mt-3">
+          <button onclick="clearCanvas()" class="preset-btn flex-1 text-center">🗑 Clear Room</button>
+          <button onclick="autoArrange()" class="preset-btn flex-1 text-center">✨ Auto Arrange</button>
+        </div>
+      </div>
+
+      <!-- BUDGET PANEL -->
+      <div class="lg:col-span-1">
+        <div id="budget-panel">
+          <div class="font-display text-xs text-gray-500 tracking-widest mb-1">ESTIMATED BUDGET</div>
+          <div class="budget-total text-2xl font-bold mb-1" id="budget-total">$0</div>
+          <div class="text-xs text-gray-500 font-body mb-4" id="budget-range">Add items to see estimate</div>
+
+          <!-- Budget bar -->
+          <div class="bg-gray-800 rounded h-1 mb-6 overflow-hidden">
+            <div class="budget-bar" id="budget-bar-fill" style="width:0%;"></div>
+          </div>
+
+          <!-- Budget presets -->
+          <div class="font-display text-xs text-gray-600 tracking-widest mb-2">BUDGET PRESET</div>
+          <div class="flex gap-2 mb-5">
+            <button class="preset-btn flex-1 text-center" onclick="applyPreset('low')" id="preset-low">Low</button>
+            <button class="preset-btn flex-1 text-center" onclick="applyPreset('mid')" id="preset-mid">Mid</button>
+            <button class="preset-btn flex-1 text-center" onclick="applyPreset('high')" id="preset-high">High</button>
+          </div>
+
+          <!-- Category breakdown -->
+          <div class="font-display text-xs text-gray-500 tracking-widest mb-3">BREAKDOWN</div>
+          <div id="budget-breakdown" class="space-y-0 mb-5">
+            <!-- dynamically filled -->
+          </div>
+
+          <div class="divider-glow mb-4"></div>
+
+          <!-- Trust builders -->
+          <p class="text-xs text-gray-500 font-body leading-relaxed mb-4">
+            ⚠️ This is an estimated budget. Final cost may vary depending on brands and availability.
+          </p>
+          <p class="text-xs font-body leading-relaxed mb-5" style="color: rgba(0,212,255,0.6);">
+            💡 We optimize your setup based on your exact budget.
+          </p>
+
+          <!-- CTA -->
+          <a href="https://wa.me/6288226439743" target="_blank" id="design-for-me-btn"
+            class="btn-wa w-full text-center block" style="font-size:0.7rem;padding:14px;">
+            🚀 Design This Setup For Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how-it-works" class="py-24 px-6 lg:px-12 relative">
+  <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at center, rgba(168,85,247,0.04) 0%, transparent 70%);"></div>
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="section-badge">⚙️ The Process</div>
+      <h2 class="font-display font-bold mb-4" style="font-size: clamp(1.8rem, 4vw, 3rem);">
+        How It <span class="gradient-text">Works</span>
+      </h2>
+      <p class="text-gray-400 font-body text-lg max-w-xl mx-auto">Four steps from idea to your perfect gaming sanctuary.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Step 1 -->
+      <div class="text-center reveal">
+        <div class="relative inline-flex items-center justify-center w-16 h-16 rounded-full border-2 mb-6 mx-auto" style="border-color:#00d4ff;box-shadow:0 0 20px rgba(0,212,255,0.3);">
+          <span class="text-2xl">🏗️</span>
+          <div class="absolute -top-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center font-display text-xs" style="background:linear-gradient(135deg,#00d4ff,#a855f7);color:#030712;font-weight:700;">1</div>
+        </div>
+        <h3 class="font-display text-sm font-bold mb-3 tracking-wide glow-blue">Customize Your Room</h3>
+        <p class="text-gray-400 font-body text-sm leading-relaxed">Use our room builder to configure your space, add your preferred items, and set your budget range.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="text-center reveal" style="transition-delay:0.1s;">
+        <div class="relative inline-flex items-center justify-center w-16 h-16 rounded-full border-2 mb-6 mx-auto" style="border-color:#a855f7;box-shadow:0 0 20px rgba(168,85,247,0.3);">
+          <span class="text-2xl">📤</span>
+          <div class="absolute -top-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center font-display text-xs" style="background:linear-gradient(135deg,#a855f7,#ff00ff);color:#fff;font-weight:700;">2</div>
+        </div>
+        <h3 class="font-display text-sm font-bold mb-3 tracking-wide glow-purple">Submit Your Idea</h3>
+        <p class="text-gray-400 font-body text-sm leading-relaxed">Send us your preferences, room measurements, and inspiration. We'll review it within 24 hours.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="text-center reveal" style="transition-delay:0.2s;">
+        <div class="relative inline-flex items-center justify-center w-16 h-16 rounded-full border-2 mb-6 mx-auto" style="border-color:#ff00ff;box-shadow:0 0 20px rgba(255,0,255,0.3);">
+          <span class="text-2xl">🎨</span>
+          <div class="absolute -top-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center font-display text-xs" style="background:linear-gradient(135deg,#ff00ff,#00d4ff);color:#fff;font-weight:700;">3</div>
+        </div>
+        <h3 class="font-display text-sm font-bold mb-3 tracking-wide glow-pink">We Design in 3D</h3>
+        <p class="text-gray-400 font-body text-sm leading-relaxed">Our designers craft a photorealistic 3D render of your setup — every angle, every cable, every light.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="text-center reveal" style="transition-delay:0.3s;">
+        <div class="relative inline-flex items-center justify-center w-16 h-16 rounded-full border-2 mb-6 mx-auto" style="border-color:#00ff88;box-shadow:0 0 20px rgba(0,255,136,0.3);">
+          <span class="text-2xl">🚀</span>
+          <div class="absolute -top-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center font-display text-xs" style="background:linear-gradient(135deg,#00ff88,#00d4ff);color:#030712;font-weight:700;">4</div>
+        </div>
+        <h3 class="font-display text-sm font-bold mb-3 tracking-wide" style="color:#00ff88;text-shadow:0 0 20px rgba(0,255,136,0.6);">Get Your Setup Plan</h3>
+        <p class="text-gray-400 font-body text-sm leading-relaxed">Receive your complete setup plan: 3D renders, a curated shopping list, layout guide, and assembly tips.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-glow"></div>
+
+<!-- ===== PACKAGES ===== -->
+<section id="packages" class="py-24 px-6 lg:px-12">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="section-badge">💼 Design Packages</div>
+      <h2 class="font-display font-bold mb-4" style="font-size: clamp(1.8rem, 4vw, 3rem);">
+        Choose Your <span class="gradient-text">Plan</span>
+      </h2>
+      <p class="text-gray-400 font-body text-lg max-w-lg mx-auto">Every plan includes a complete, personalized design — choose the depth that matches your vision.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Basic -->
+      <div class="package-card reveal" style="--tw-text-opacity:1;color:rgba(0,212,255,var(--tw-text-opacity));">
+        <div class="absolute top-0 left-0 right-0 h-0.5" style="background:linear-gradient(90deg,transparent,#00d4ff,transparent);"></div>
+        <div class="font-display text-xs tracking-widest text-gray-500 mb-2">TIER 01</div>
+        <h3 class="font-display text-xl font-bold mb-1 glow-blue">BASIC</h3>
+        <p class="text-gray-500 font-body text-sm mb-6">Perfect for solo players on a focused budget.</p>
+        <div class="mb-8">
+          <span class="font-display text-3xl font-bold glow-blue">$49</span>
+          <span class="text-gray-500 font-body text-sm"> / one-time</span>
+        </div>
+        <ul class="space-y-3 mb-8 font-body">
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">2D Layout Planning</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">1× 3D Render (1 angle)</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">Curated Shopping List</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">1 Revision Round</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-gray-600 text-lg">✗</span> <span class="text-gray-600">Cable Management Guide</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-gray-600 text-lg">✗</span> <span class="text-gray-600">Lighting Mood Plan</span></li>
+        </ul>
+        <a href="https://wa.me/6288226439743" target="_blank" class="btn-secondary w-full text-center block" style="font-size:0.72rem;">Get Basic Plan →</a>
+      </div>
+
+      <!-- Standard (FEATURED) -->
+      <div class="package-card featured reveal" style="transition-delay:0.1s;transform:scale(1.03);">
+        <div class="absolute top-0 left-0 right-0 h-0.5" style="background:linear-gradient(90deg,transparent,#a855f7,transparent);"></div>
+        <!-- Popular badge -->
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+          <div class="font-display text-xs tracking-widest px-4 py-1.5 rounded-full" style="background:linear-gradient(135deg,#a855f7,#00d4ff);color:#030712;font-weight:700;">MOST POPULAR</div>
+        </div>
+        <div class="font-display text-xs tracking-widest text-gray-500 mb-2 mt-4">TIER 02</div>
+        <h3 class="font-display text-xl font-bold mb-1 glow-purple">STANDARD</h3>
+        <p class="text-gray-500 font-body text-sm mb-6">Serious gamers who want the full experience.</p>
+        <div class="mb-8">
+          <span class="font-display text-3xl font-bold glow-purple">$99</span>
+          <span class="text-gray-500 font-body text-sm"> / one-time</span>
+        </div>
+        <ul class="space-y-3 mb-8 font-body">
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">Full 2D + 3D Layout</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">3× 3D Renders (multi-angle)</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">Curated Shopping List</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">3 Revision Rounds</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">Cable Management Guide</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">Lighting Mood Plan</span></li>
+        </ul>
+        <a href="https://wa.me/6288226439743" target="_blank" class="btn-primary w-full text-center block" style="font-size:0.72rem;">Get Standard Plan</a>
+      </div>
+
+      <!-- Premium -->
+      <div class="package-card reveal" style="transition-delay:0.2s;">
+        <div class="absolute top-0 left-0 right-0 h-0.5" style="background:linear-gradient(90deg,transparent,#ff00ff,transparent);"></div>
+        <div class="font-display text-xs tracking-widest text-gray-500 mb-2">TIER 03</div>
+        <h3 class="font-display text-xl font-bold mb-1 glow-pink">PREMIUM</h3>
+        <p class="text-gray-500 font-body text-sm mb-6">For creators, streamers, and legends.</p>
+        <div class="mb-8">
+          <span class="font-display text-3xl font-bold glow-pink">$199</span>
+          <span class="text-gray-500 font-body text-sm"> / one-time</span>
+        </div>
+        <ul class="space-y-3 mb-8 font-body">
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">Full 2D + Cinematic 3D</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">6+ 3D Renders + Walkthrough</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">Premium Shopping List</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">Unlimited Revisions</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">Full Cable Management</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">RGB Lighting Scene Plan</span></li>
+          <li class="flex items-center gap-3 text-sm"><span class="text-green-400 text-lg">✓</span> <span class="text-gray-300">Priority Support (WhatsApp)</span></li>
+        </ul>
+        <a href="https://wa.me/6288226439743" target="_blank" class="btn-secondary w-full text-center block" style="font-size:0.72rem;border-color:rgba(255,0,255,0.5);color:#ff00ff;">Get Premium Plan →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-glow"></div>
+
+<!-- ===== PORTFOLIO ===== -->
+<section id="portfolio" class="py-24 px-6 lg:px-12">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="section-badge">🖼️ Portfolio</div>
+      <h2 class="font-display font-bold mb-4" style="font-size: clamp(1.8rem, 4vw, 3rem);">
+        Real Setups. <span class="gradient-text">Real Results.</span>
+      </h2>
+      <p class="text-gray-400 font-body text-lg max-w-lg mx-auto">Every project starts with an empty room and ends with a legendary setup.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Portfolio items with SVG placeholder art -->
+      <div class="portfolio-item reveal" style="height:260px;">
+        <div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#0d1428,#0a1f3c,#1a0a2e);">
+          <svg width="100%" height="100%" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;">
+            <!-- Room silhouette -->
+            <rect x="20" y="40" width="260" height="140" fill="none" stroke="rgba(0,212,255,0.1)" stroke-width="1"/>
+            <!-- Desk -->
+            <rect x="40" y="120" width="120" height="8" fill="rgba(0,212,255,0.3)" rx="2"/>
+            <rect x="45" y="128" width="6" height="32" fill="rgba(0,212,255,0.2)"/>
+            <rect x="148" y="128" width="6" height="32" fill="rgba(0,212,255,0.2)"/>
+            <!-- Monitor -->
+            <rect x="70" y="80" width="60" height="40" fill="none" stroke="rgba(0,212,255,0.5)" stroke-width="1.5" rx="2"/>
+            <rect x="75" y="85" width="50" height="30" fill="rgba(0,212,255,0.08)"/>
+            <rect x="96" y="120" width="8" height="5" fill="rgba(0,212,255,0.3)"/>
+            <!-- Chair -->
+            <rect x="70" y="148" width="60" height="8" fill="rgba(168,85,247,0.4)" rx="3"/>
+            <rect x="85" y="140" width="30" height="20" fill="rgba(168,85,247,0.2)" rx="2"/>
+            <!-- RGB strip -->
+            <line x1="40" y1="120" x2="160" y2="120" stroke="rgba(0,212,255,0.6)" stroke-width="2"/>
+            <!-- Glow -->
+            <ellipse cx="100" cy="100" rx="60" ry="40" fill="none" stroke="rgba(0,212,255,0.1)" stroke-width="20"/>
+            <!-- Text -->
+            <text x="200" y="90" fill="rgba(0,212,255,0.5)" font-family="monospace" font-size="8">MINIMALIST</text>
+            <text x="200" y="102" fill="rgba(168,85,247,0.5)" font-family="monospace" font-size="8">BLUE BUILD</text>
+          </svg>
+        </div>
+        <div class="portfolio-overlay rounded-lg">
+          <div class="font-display text-sm font-bold glow-blue mb-2">Minimalist Blue Build</div>
+          <div class="text-gray-400 font-body text-xs mb-4">4m × 4m · Budget: $800</div>
+          <span class="btn-secondary text-xs py-2 px-4">View Details</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal" style="height:260px;transition-delay:0.1s;">
+        <div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#1a0a2e,#0a0f1e,#0d1428);">
+          <svg width="100%" height="100%" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;">
+            <rect x="20" y="40" width="260" height="140" fill="none" stroke="rgba(168,85,247,0.1)" stroke-width="1"/>
+            <!-- L-shaped desk -->
+            <rect x="30" y="110" width="140" height="8" fill="rgba(168,85,247,0.4)" rx="2"/>
+            <rect x="160" y="80" width="8" height="38" fill="rgba(168,85,247,0.4)" rx="2"/>
+            <rect x="30" y="80" width="138" height="8" fill="rgba(168,85,247,0.25)" rx="2"/>
+            <!-- 3 monitors -->
+            <rect x="35" y="55" width="40" height="28" fill="none" stroke="rgba(168,85,247,0.6)" stroke-width="1.5" rx="1"/>
+            <rect x="80" y="50" width="50" height="32" fill="none" stroke="rgba(168,85,247,0.8)" stroke-width="2" rx="1"/>
+            <rect x="135" y="55" width="40" height="28" fill="none" stroke="rgba(168,85,247,0.6)" stroke-width="1.5" rx="1"/>
+            <!-- RGB lighting -->
+            <line x1="30" y1="110" x2="170" y2="110" stroke="rgba(255,0,255,0.8)" stroke-width="2"/>
+            <ellipse cx="105" cy="130" rx="80" ry="20" fill="rgba(168,85,247,0.05)"/>
+            <text x="200" y="140" fill="rgba(168,85,247,0.5)" font-family="monospace" font-size="8">TRIPLE</text>
+            <text x="200" y="152" fill="rgba(255,0,255,0.5)" font-family="monospace" font-size="8">MONITOR PRO</text>
+          </svg>
+        </div>
+        <div class="portfolio-overlay rounded-lg">
+          <div class="font-display text-sm font-bold glow-purple mb-2">Triple Monitor Pro</div>
+          <div class="text-gray-400 font-body text-xs mb-4">5m × 4m · Budget: $2,200</div>
+          <span class="btn-secondary text-xs py-2 px-4" style="border-color:rgba(168,85,247,0.5);color:#a855f7;">View Details</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal" style="height:260px;transition-delay:0.2s;">
+        <div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#0a1f2e,#0d1428,#1a1a0a);">
+          <svg width="100%" height="100%" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;">
+            <rect x="20" y="40" width="260" height="140" fill="none" stroke="rgba(0,255,136,0.1)" stroke-width="1"/>
+            <!-- Streamer setup -->
+            <rect x="50" y="115" width="100" height="7" fill="rgba(0,255,136,0.3)" rx="2"/>
+            <rect x="70" y="70" width="60" height="45" fill="none" stroke="rgba(0,255,136,0.5)" stroke-width="1.5" rx="2"/>
+            <!-- Ring light -->
+            <circle cx="220" cy="100" r="30" fill="none" stroke="rgba(255,255,200,0.3)" stroke-width="4"/>
+            <circle cx="220" cy="100" r="20" fill="none" stroke="rgba(255,255,200,0.15)" stroke-width="2"/>
+            <!-- Acoustic panels -->
+            <rect x="220" y="50" width="40" height="60" fill="rgba(0,255,136,0.08)" rx="3" stroke="rgba(0,255,136,0.2)" stroke-width="1"/>
+            <!-- RGB underglow -->
+            <ellipse cx="100" cy="155" rx="60" ry="10" fill="rgba(0,255,136,0.1)"/>
+            <text x="30" y="175" fill="rgba(0,255,136,0.5)" font-family="monospace" font-size="8">STREAMER</text>
+            <text x="30" y="187" fill="rgba(255,255,200,0.4)" font-family="monospace" font-size="8">COMMAND CENTER</text>
+          </svg>
+        </div>
+        <div class="portfolio-overlay rounded-lg">
+          <div class="font-display text-sm font-bold mb-2" style="color:#00ff88;text-shadow:0 0 15px rgba(0,255,136,0.6);">Streamer Command</div>
+          <div class="text-gray-400 font-body text-xs mb-4">6m × 5m · Budget: $3,500</div>
+          <span class="btn-secondary text-xs py-2 px-4" style="border-color:rgba(0,255,136,0.5);color:#00ff88;">View Details</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal" style="height:220px;transition-delay:0.0s;">
+        <div class="w-full h-full" style="background:linear-gradient(135deg,#1a0f0a,#1a0a1a,#0a1628);">
+          <svg width="100%" height="100%" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="30" width="100" height="6" fill="rgba(255,100,0,0.4)" rx="2"/>
+            <rect x="50" y="10" width="60" height="22" fill="none" stroke="rgba(255,100,0,0.5)" stroke-width="1.5" rx="1"/>
+            <rect x="170" y="25" width="80" height="6" fill="rgba(255,0,100,0.4)" rx="2"/>
+            <rect x="185" y="5" width="50" height="22" fill="none" stroke="rgba(255,0,100,0.5)" stroke-width="1.5" rx="1"/>
+            <line x1="0" y1="36" x2="300" y2="36" stroke="rgba(255,50,0,0.6)" stroke-width="1.5"/>
+            <text x="20" y="80" fill="rgba(255,100,0,0.5)" font-family="monospace" font-size="9">RED × BLACK</text>
+            <text x="20" y="92" fill="rgba(255,0,100,0.4)" font-family="monospace" font-size="9">DUAL DESK BEAST</text>
+          </svg>
+        </div>
+        <div class="portfolio-overlay rounded-lg">
+          <div class="font-display text-sm font-bold mb-2" style="color:#ff6400;text-shadow:0 0 15px rgba(255,100,0,0.6);">Red × Black Beast</div>
+          <div class="text-gray-400 font-body text-xs mb-3">4m × 6m · Budget: $1,800</div>
+          <span class="btn-secondary text-xs py-2 px-4" style="border-color:rgba(255,100,0,0.5);color:#ff6400;">View Details</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item md:col-span-2 reveal" style="height:220px;transition-delay:0.1s;">
+        <div class="w-full h-full" style="background:linear-gradient(135deg,#030a1a,#0a0f1e,#1a0a2e);">
+          <svg width="100%" height="100%" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Epic panoramic setup -->
+            <rect x="50" y="80" width="500" height="10" fill="rgba(0,212,255,0.25)" rx="2"/>
+            <rect x="80" y="30" width="80" height="50" fill="none" stroke="rgba(0,212,255,0.6)" stroke-width="2" rx="2"/>
+            <rect x="180" y="20" width="100" height="60" fill="none" stroke="rgba(0,212,255,0.8)" stroke-width="2.5" rx="2"/>
+            <rect x="300" y="30" width="80" height="50" fill="none" stroke="rgba(0,212,255,0.6)" stroke-width="2" rx="2"/>
+            <rect x="400" y="35" width="70" height="45" fill="none" stroke="rgba(168,85,247,0.5)" stroke-width="1.5" rx="2"/>
+            <!-- LED strips -->
+            <line x1="50" y1="80" x2="550" y2="80" stroke="url(#ledGrad)" stroke-width="3"/>
+            <defs>
+              <linearGradient id="ledGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#00d4ff"/>
+                <stop offset="33%" stop-color="#a855f7"/>
+                <stop offset="66%" stop-color="#ff00ff"/>
+                <stop offset="100%" stop-color="#00d4ff"/>
+              </linearGradient>
+            </defs>
+            <!-- Glow -->
+            <ellipse cx="300" cy="130" rx="200" ry="30" fill="rgba(0,212,255,0.04)"/>
+            <text x="200" y="165" fill="rgba(0,212,255,0.4)" font-family="monospace" font-size="12">THE ULTIMATE COMMAND CENTER</text>
+          </svg>
+        </div>
+        <div class="portfolio-overlay rounded-lg">
+          <div class="font-display text-base font-bold gradient-text mb-2">The Ultimate Command Center</div>
+          <div class="text-gray-400 font-body text-xs mb-3">8m × 6m · Budget: $5,000+</div>
+          <span class="btn-primary text-xs py-2 px-6">View Details</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-glow"></div>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials" class="py-24 px-6 lg:px-12">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="section-badge">💬 Testimonials</div>
+      <h2 class="font-display font-bold mb-4" style="font-size: clamp(1.8rem, 4vw, 3rem);">
+        Gamers Who <span class="gradient-text">Leveled Up</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- T1 -->
+      <div class="testimonial-card reveal">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-yellow-400 text-sm">★★★★★</span>
+        </div>
+        <p class="font-body text-gray-300 leading-relaxed mb-5 text-sm">"I spent months watching YouTube videos trying to plan my setup, wasted $400 on the wrong desk, and still had a mess. These guys built me a complete 3D plan in 3 days and I finally have the setup I always dreamed of. <strong class="text-white">Completely worth it.</strong>"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-display text-sm font-bold" style="background:linear-gradient(135deg,#00d4ff,#a855f7);">RK</div>
+          <div>
+            <div class="font-display text-xs text-white">Raka K.</div>
+            <div class="text-gray-500 text-xs font-body">FPS Gamer · Jakarta</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T2 -->
+      <div class="testimonial-card reveal" style="transition-delay:0.1s;">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-yellow-400 text-sm">★★★★★</span>
+        </div>
+        <p class="font-body text-gray-300 leading-relaxed mb-5 text-sm">"I'm a streamer and my room looked terrible on camera. After the Premium plan, my room looks like a proper studio. <strong class="text-white">My subscribers thought I bought a new house.</strong> The lighting plan alone was gold."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-display text-sm font-bold" style="background:linear-gradient(135deg,#a855f7,#ff00ff);">AZ</div>
+          <div>
+            <div class="font-display text-xs text-white">Aziz T.</div>
+            <div class="text-gray-500 text-xs font-body">Content Creator · Bandung</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T3 -->
+      <div class="testimonial-card reveal" style="transition-delay:0.2s;">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-yellow-400 text-sm">★★★★★</span>
+        </div>
+        <p class="font-body text-gray-300 leading-relaxed mb-5 text-sm">"The budget estimator tool alone saved me from making stupid purchases. When I saw the 3D render I literally screamed. <strong class="text-white">I finally got my dream setup and saved $600</strong> by following their shopping list."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-display text-sm font-bold" style="background:linear-gradient(135deg,#00ff88,#00d4ff);">FN</div>
+          <div>
+            <div class="font-display text-xs text-white">Fajar N.</div>
+            <div class="text-gray-500 text-xs font-body">MOBA Player · Surabaya</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T4 -->
+      <div class="testimonial-card reveal" style="transition-delay:0.0s;">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-yellow-400 text-sm">★★★★★</span>
+        </div>
+        <p class="font-body text-gray-300 leading-relaxed mb-5 text-sm">"My parents said no to an expensive setup. The team helped me design one for just $400 that looked insane. <strong class="text-white">Even my dad said it looked professional.</strong> Incredible value."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-display text-sm font-bold" style="background:linear-gradient(135deg,#ff6400,#ff00ff);">DH</div>
+          <div>
+            <div class="font-display text-xs text-white">Dimas H.</div>
+            <div class="text-gray-500 text-xs font-body">Student Gamer · Yogyakarta</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T5 -->
+      <div class="testimonial-card reveal" style="transition-delay:0.1s;">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-yellow-400 text-sm">★★★★★</span>
+        </div>
+        <p class="font-body text-gray-300 leading-relaxed mb-5 text-sm">"I've used 3 different interior designers before and they never understood gaming setups. This team gets it. <strong class="text-white">The cable management plan alone was worth the price.</strong> Zero clutter, full glow."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-display text-sm font-bold" style="background:linear-gradient(135deg,#00d4ff,#00ff88);">SA</div>
+          <div>
+            <div class="font-display text-xs text-white">Septian A.</div>
+            <div class="text-gray-500 text-xs font-body">Esports Enthusiast · Medan</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T6 -->
+      <div class="testimonial-card reveal" style="transition-delay:0.2s;">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-yellow-400 text-sm">★★★★★</span>
+        </div>
+        <p class="font-body text-gray-300 leading-relaxed mb-5 text-sm">"Ordered the Standard plan on a Tuesday. Had my full 3D renders by Thursday. By the following weekend <strong class="text-white">my room was completely transformed.</strong> 5 stars isn't enough."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-display text-sm font-bold" style="background:linear-gradient(135deg,#a855f7,#00d4ff);">YP</div>
+          <div>
+            <div class="font-display text-xs text-white">Yusuf P.</div>
+            <div class="text-gray-500 text-xs font-body">RPG Gamer · Makassar</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-glow"></div>
+
+<!-- ===== FINAL CTA ===== -->
+<section id="cta" class="py-32 px-6 lg:px-12 relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(0,212,255,0.06) 0%,rgba(168,85,247,0.04) 40%,transparent 70%);filter:blur(40px);"></div>
+    <div class="hero-grid absolute inset-0 opacity-50"></div>
+  </div>
+
+  <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
+    <div class="section-badge mb-8">🚀 Ready to Start?</div>
+    <h2 class="font-display font-black mb-6 leading-tight" style="font-size: clamp(2rem, 5vw, 4rem);">
+      Your Dream Setup Is<br />
+      <span class="gradient-text">One Message Away.</span>
+    </h2>
+    <p class="text-gray-400 font-body text-xl mb-4 max-w-2xl mx-auto leading-relaxed">
+      Stop settling for a random collection of gear. Get a setup designed by professionals, built for <strong class="text-white">your space, your budget, your style.</strong>
+    </p>
+    <p class="text-gray-500 font-body text-sm mb-10">⚡ Fast turnaround · 💯 Satisfaction guaranteed · 🇮🇩 Indonesian team</p>
+
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="https://wa.me/6288226439743" target="_blank" class="btn-wa text-sm">
+        💬 Order Your Setup Now
+      </a>
+      <a href="#builder" class="btn-secondary">Try Room Builder First</a>
+    </div>
+
+    <!-- Urgency note -->
+    <div class="mt-10 inline-flex items-center gap-2 px-5 py-3 rounded-full" style="background:rgba(255,100,0,0.08);border:1px solid rgba(255,100,0,0.2);">
+      <div class="w-2 h-2 rounded-full animate-pulse" style="background:#ff6400;"></div>
+      <span class="text-xs font-display tracking-widest" style="color:#ff9950;">LIMITED SLOTS OPEN THIS MONTH — BOOK NOW</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="relative border-t" style="border-color:rgba(0,212,255,0.08);background:rgba(3,7,18,0.95);">
+  <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(180deg,transparent,rgba(0,212,255,0.02));"></div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <!-- Brand -->
+      <div class="md:col-span-2">
+        <div class="font-display text-xl font-bold mb-3">
+          <span class="glow-blue">3D</span><span class="text-white"> GAMING</span><span class="glow-purple"> SETUPS</span>
+        </div>
+        <p class="text-gray-500 font-body text-sm leading-relaxed max-w-xs mb-5">We turn your gaming room dreams into precisely designed, budget-optimized realities. Every pixel. Every cable. Every glow.</p>
+        <div class="flex gap-4">
+          <a href="https://wa.me/6288226439743" target="_blank" class="w-10 h-10 rounded flex items-center justify-center transition-all" style="background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.15);" onmouseenter="this.style.boxShadow='0 0 15px rgba(0,212,255,0.3)'" onmouseleave="this.style.boxShadow='none'">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="#00d4ff"><path d="M16.003 0C7.17 0 0 7.17 0 16.003c0 2.82.74 5.47 2.03 7.77L0 32l8.43-2.01c2.22 1.18 4.75 1.86 7.44 1.86h.01C24.83 31.86 32 24.69 32 15.857 32 7.17 24.836 0 16.003 0zm7.21 19.3c-.4-.2-2.34-1.15-2.7-1.28-.36-.13-.62-.2-.88.2-.26.4-1.01 1.28-1.24 1.55-.23.27-.46.3-.86.1-.4-.2-1.69-.62-3.22-1.98-1.19-1.06-1.99-2.37-2.22-2.77-.23-.4-.02-.61.17-.81.18-.18.4-.47.6-.7.2-.23.27-.4.4-.66.13-.27.07-.5-.03-.7-.1-.2-.88-2.12-1.2-2.9-.32-.76-.64-.66-.88-.67-.23-.01-.5-.01-.76-.01-.26 0-.68.1-1.03.5-.35.4-1.34 1.31-1.34 3.19s1.37 3.7 1.56 3.95c.19.25 2.7 4.13 6.54 5.78.91.39 1.63.63 2.19.8.92.29 1.76.25 2.42.15.74-.11 2.27-.93 2.59-1.82.32-.89.32-1.66.22-1.82-.1-.16-.36-.26-.76-.46z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded flex items-center justify-center transition-all" style="background:rgba(168,85,247,0.08);border:1px solid rgba(168,85,247,0.15);" onmouseenter="this.style.boxShadow='0 0 15px rgba(168,85,247,0.3)'" onmouseleave="this.style.boxShadow='none'">
+            <svg width="18" height="18" fill="#a855f7" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded flex items-center justify-center transition-all" style="background:rgba(255,0,255,0.08);border:1px solid rgba(255,0,255,0.15);" onmouseenter="this.style.boxShadow='0 0 15px rgba(255,0,255,0.3)'" onmouseleave="this.style.boxShadow='none'">
+            <svg width="18" height="18" fill="#ff00ff" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.13 8.13 0 004.77 1.52V6.75a4.85 4.85 0 01-1-.06z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <div class="font-display text-xs tracking-widest mb-5" style="color:#00d4ff;">SERVICES</div>
+        <ul class="space-y-2.5 font-body text-sm text-gray-500">
+          <li><a href="#builder" class="hover:text-white transition-colors hover:glow-blue">Room Builder</a></li>
+          <li><a href="#packages" class="hover:text-white transition-colors">Basic Plan</a></li>
+          <li><a href="#packages" class="hover:text-white transition-colors">Standard Plan</a></li>
+          <li><a href="#packages" class="hover:text-white transition-colors">Premium Plan</a></li>
+          <li><a href="https://wa.me/6288226439743" target="_blank" class="hover:text-white transition-colors">Custom Consultation</a></li>
+        </ul>
+      </div>
+
+      <!-- About -->
+      <div>
+        <div class="font-display text-xs tracking-widest mb-5" style="color:#a855f7;">CONTACT</div>
+        <ul class="space-y-2.5 font-body text-sm text-gray-500">
+          <li class="flex items-center gap-2">
+            <span style="color:#25D366;">●</span>
+            <a href="https://wa.me/6288226439743" target="_blank" class="hover:text-white transition-colors">WhatsApp: +62 882-2643-9743</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <span style="color:#a855f7;">●</span>
+            <span>@3dgamingsetups</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span style="color:#00d4ff;">●</span>
+            <span>Indonesia 🇮🇩</span>
+          </li>
+          <li class="mt-4 text-xs leading-relaxed" style="color:rgba(255,255,255,0.3);">Fast replies within 2 hours during business hours.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4" style="border-top:1px solid rgba(255,255,255,0.05);">
+      <p class="text-gray-600 font-body text-xs">© 2025 3D Gaming Setups. All rights reserved.</p>
+      <p class="text-gray-700 font-body text-xs">Crafted with ⚡ for gamers who demand the best.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// ===== LOADER =====
+(function() {
+  const fill = document.getElementById('loader-fill');
+  const pct = document.getElementById('loader-pct');
+  let p = 0;
+  const iv = setInterval(() => {
+    p = Math.min(p + Math.random() * 15, 100);
+    fill.style.width = p + '%';
+    pct.textContent = Math.floor(p) + '%';
+    if (p >= 100) {
+      clearInterval(iv);
+      setTimeout(() => document.getElementById('loader').classList.add('hidden'), 400);
+    }
+  }, 80);
+})();
+
+// ===== NAVBAR SCROLL =====
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ===== MOBILE MENU =====
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.toggle('open');
+});
+function closeMobileMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+}
+
+// ===== REVEAL ANIMATIONS =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ===== ROOM BUILDER DATA =====
+const CATEGORIES = {
+  desk: {
+    label: 'Desk', icon: '🖥️',
+    items: [
+      { id:'desk-basic', name:'Basic Desk', icon:'🖥️', emoji:'🖥️', w:90, h:50, color:'rgba(0,212,255,0.5)', priceMin:80, priceMax:200 },
+      { id:'desk-l', name:'L-Shape Desk', icon:'🖥️', emoji:'📐', w:110, h:80, color:'rgba(0,212,255,0.5)', priceMin:200, priceMax:600 },
+      { id:'desk-standing', name:'Standing Desk', icon:'🖥️', emoji:'⬆️', w:95, h:55, color:'rgba(0,212,255,0.5)', priceMin:300, priceMax:900 },
+    ]
+  },
+  chair: {
+    label: 'Chair', icon: '💺',
+    items: [
+      { id:'chair-gaming', name:'Gaming Chair', icon:'💺', emoji:'💺', w:55, h:55, color:'rgba(168,85,247,0.6)', priceMin:150, priceMax:500 },
+      { id:'chair-ergo', name:'Ergonomic Chair', icon:'💺', emoji:'🪑', w:55, h:55, color:'rgba(168,85,247,0.6)', priceMin:300, priceMax:1200 },
+    ]
+  },
+  monitor: {
+    label: 'Monitor', icon: '🖥',
+    items: [
+      { id:'mon-24', name:'24" Monitor', icon:'🖥', emoji:'🖥', w:60, h:40, color:'rgba(0,255,136,0.5)', priceMin:150, priceMax:400 },
+      { id:'mon-27', name:'27" Monitor', icon:'🖥', emoji:'🖥', w:70, h:45, color:'rgba(0,255,136,0.5)', priceMin:250, priceMax:700 },
+      { id:'mon-ultra', name:'Ultrawide 34"', icon:'🖥', emoji:'📺', w:100, h:45, color:'rgba(0,255,136,0.5)', priceMin:400, priceMax:1200 },
+    ]
+  },
+  lighting: {
+    label: 'Lighting', icon: '💡',
+    items: [
+      { id:'light-led', name:'LED Strip', icon:'💡', emoji:'🌈', w:80, h:15, color:'rgba(255,0,255,0.6)', priceMin:15, priceMax:60 },
+      { id:'light-lamp', name:'Desk Lamp', icon:'💡', emoji:'💡', w:25, h:45, color:'rgba(255,255,0,0.5)', priceMin:30, priceMax:150 },
+      { id:'light-panel', name:'LED Panel', icon:'💡', emoji:'🔦', w:40, h:40, color:'rgba(255,200,0,0.5)', priceMin:50, priceMax:200 },
+      { id:'light-ring', name:'Ring Light', icon:'💡', emoji:'⭕', w:50, h:50, color:'rgba(255,255,255,0.4)', priceMin:40, priceMax:150 },
+    ]
+  },
+  accessories: {
+    label: 'Accessories', icon: '🎮',
+    items: [
+      { id:'acc-pc', name:'PC Tower', icon:'🖥️', emoji:'🖥️', w:40, h:60, color:'rgba(0,212,255,0.4)', priceMin:500, priceMax:3000 },
+      { id:'acc-kb', name:'Keyboard', icon:'⌨️', emoji:'⌨️', w:55, h:25, color:'rgba(255,100,0,0.5)', priceMin:30, priceMax:300 },
+      { id:'acc-mouse', name:'Mouse + Pad', icon:'🖱️', emoji:'🖱️', w:35, h:25, color:'rgba(255,100,0,0.4)', priceMin:20, priceMax:200 },
+      { id:'acc-headset', name:'Headset', icon:'🎧', emoji:'🎧', w:35, h:30, color:'rgba(168,85,247,0.5)', priceMin:50, priceMax:400 },
+      { id:'acc-speaker', name:'Speakers', icon:'🔊', emoji:'🔊', w:30, h:40, color:'rgba(0,212,255,0.4)', priceMin:50, priceMax:500 },
+      { id:'acc-cam', name:'Webcam', icon:'📷', emoji:'📷', w:25, h:25, color:'rgba(0,255,136,0.5)', priceMin:30, priceMax:200 },
+    ]
+  }
+};
+
+// State
+let currentCat = 'desk';
+let placedItems = []; // {id, itemId, itemData, x, y}
+let budgetState = {};
+let dragging = null, dragOffX = 0, dragOffY = 0;
+let uidCount = 0;
+
+// Init category tabs
+document.querySelectorAll('.category-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.category-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCat = btn.dataset.cat;
+    renderItemsList();
+  });
+});
+
+function renderItemsList() {
+  const container = document.getElementById('items-list');
+  const cat = CATEGORIES[currentCat];
+  container.innerHTML = cat.items.map(item => `
+    <div class="sidebar-item" onclick="addItem('${item.id}')">
+      <div class="text-2xl mb-1">${item.emoji}</div>
+      <div class="text-xs font-semibold text-gray-300" style="font-family:'Rajdhani',sans-serif;">${item.name}</div>
+      <div class="text-xs mt-0.5" style="color:rgba(0,212,255,0.6);font-family:'Orbitron',sans-serif;font-size:9px;">$${item.priceMin}–$${item.priceMax}</div>
+    </div>
+  `).join('');
+}
+
+function addItem(itemId) {
+  // Find item
+  let itemData = null;
+  for (const cat of Object.values(CATEGORIES)) {
+    const found = cat.items.find(i => i.id === itemId);
+    if (found) { itemData = found; break; }
+  }
+  if (!itemData) return;
+
+  const canvas = document.getElementById('room-canvas');
+  const cw = canvas.offsetWidth;
+  const ch = canvas.offsetHeight;
+  const uid = 'item_' + (++uidCount);
+
+  // Random placement
+  const x = Math.max(10, Math.min(cw - itemData.w - 10, 30 + Math.random() * (cw - itemData.w - 60)));
+  const y = Math.max(10, Math.min(ch - itemData.h - 10, 30 + Math.random() * (ch - itemData.h - 80)));
+
+  placedItems.push({ uid, itemId, itemData, x, y });
+  renderCanvas();
+  updateBudget();
+}
+
+function renderCanvas() {
+  const canvas = document.getElementById('room-canvas');
+  // Remove old placed items
+  canvas.querySelectorAll('.room-item').forEach(el => el.remove());
+
+  // Hide hint if items present
+  const hint = document.getElementById('canvas-hint');
+  hint.style.opacity = placedItems.length === 0 ? '1' : '0';
+
+  placedItems.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'room-item';
+    el.dataset.uid = item.uid;
+    el.style.cssText = `
+      left:${item.x}px; top:${item.y}px;
+      width:${item.itemData.w}px; height:${item.itemData.h}px;
+    `;
+    el.innerHTML = `
+      <div style="
+        width:100%; height:calc(100% - 18px);
+        background:${item.itemData.color};
+        border:1px solid ${item.itemData.color.replace('0.', '0.9').replace('rgba','rgba')};
+        border-radius:4px;
+        display:flex;align-items:center;justify-content:center;
+        font-size:${Math.min(item.itemData.w, item.itemData.h) * 0.35}px;
+        box-shadow: 0 0 12px ${item.itemData.color};
+        position:relative;
+      ">
+        ${item.itemData.emoji}
+        <button onclick="removeItem('${item.uid}')" style="
+          position:absolute;top:-6px;right:-6px;
+          width:16px;height:16px;border-radius:50%;
+          background:rgba(255,50,50,0.8);
+          color:white;font-size:9px;font-weight:bold;
+          border:none;cursor:pointer;line-height:16px;text-align:center;
+          display:none;
+        " class="remove-btn">×</button>
+      </div>
+      <div class="item-label">${item.itemData.name}</div>
+    `;
+    el.addEventListener('mouseenter', () => el.querySelector('.remove-btn').style.display = 'block');
+    el.addEventListener('mouseleave', () => el.querySelector('.remove-btn').style.display = 'none');
+    makeDraggable(el, item.uid);
+    canvas.appendChild(el);
+  });
+}
+
+function removeItem(uid) {
+  placedItems = placedItems.filter(i => i.uid !== uid);
+  renderCanvas();
+  updateBudget();
+}
+
+function makeDraggable(el, uid) {
+  el.addEventListener('mousedown', (e) => {
+    if (e.target.classList.contains('remove-btn')) return;
+    e.preventDefault();
+    const item = placedItems.find(i => i.uid === uid);
+    const canvas = document.getElementById('room-canvas');
+    const rect = canvas.getBoundingClientRect();
+    dragOffX = e.clientX - rect.left - item.x;
+    dragOffY = e.clientY - rect.top - item.y;
+    dragging = uid;
+    el.style.zIndex = 100;
+  });
+  // Touch support
+  el.addEventListener('touchstart', (e) => {
+    if (e.target.classList.contains('remove-btn')) return;
+    e.preventDefault();
+    const touch = e.touches[0];
+    const item = placedItems.find(i => i.uid === uid);
+    const canvas = document.getElementById('room-canvas');
+    const rect = canvas.getBoundingClientRect();
+    dragOffX = touch.clientX - rect.left - item.x;
+    dragOffY = touch.clientY - rect.top - item.y;
+    dragging = uid;
+    el.style.zIndex = 100;
+  }, { passive: false });
+}
+
+document.addEventListener('mousemove', (e) => {
+  if (!dragging) return;
+  const canvas = document.getElementById('room-canvas');
+  const rect = canvas.getBoundingClientRect();
+  const item = placedItems.find(i => i.uid === dragging);
+  if (!item) return;
+  item.x = Math.max(0, Math.min(rect.width - item.itemData.w, e.clientX - rect.left - dragOffX));
+  item.y = Math.max(0, Math.min(rect.height - item.itemData.h, e.clientY - rect.top - dragOffY));
+  const el = document.querySelector(`[data-uid="${dragging}"]`);
+  if (el) { el.style.left = item.x + 'px'; el.style.top = item.y + 'px'; }
+});
+document.addEventListener('mouseup', () => {
+  if (dragging) {
+    const el = document.querySelector(`[data-uid="${dragging}"]`);
+    if (el) el.style.zIndex = '';
+    dragging = null;
+  }
+});
+document.addEventListener('touchmove', (e) => {
+  if (!dragging) return;
+  const touch = e.touches[0];
+  const canvas = document.getElementById('room-canvas');
+  const rect = canvas.getBoundingClientRect();
+  const item = placedItems.find(i => i.uid === dragging);
+  if (!item) return;
+  item.x = Math.max(0, Math.min(rect.width - item.itemData.w, touch.clientX - rect.left - dragOffX));
+  item.y = Math.max(0, Math.min(rect.height - item.itemData.h, touch.clientY - rect.top - dragOffY));
+  const el = document.querySelector(`[data-uid="${dragging}"]`);
+  if (el) { el.style.left = item.x + 'px'; el.style.top = item.y + 'px'; }
+}, { passive: false });
+document.addEventListener('touchend', () => { dragging = null; });
+
+function clearCanvas() {
+  placedItems = [];
+  renderCanvas();
+  updateBudget();
+}
+
+function autoArrange() {
+  if (placedItems.length === 0) return;
+  const canvas = document.getElementById('room-canvas');
+  const cw = canvas.offsetWidth;
+  const ch = canvas.offsetHeight;
+  const cols = Math.ceil(Math.sqrt(placedItems.length));
+  const cellW = cw / cols;
+  placedItems.forEach((item, idx) => {
+    const col = idx % cols;
+    const row = Math.floor(idx / cols);
+    item.x = col * cellW + (cellW - item.itemData.w) / 2;
+    item.y = 20 + row * 110;
+    item.x = Math.max(5, Math.min(cw - item.itemData.w - 5, item.x));
+    item.y = Math.max(5, Math.min(ch - item.itemData.h - 30, item.y));
+  });
+  renderCanvas();
+}
+
+// ===== BUDGET SYSTEM =====
+function updateBudget() {
+  // Tally by category
+  const tally = {};
+  let totalMin = 0, totalMax = 0;
+  for (const catKey of Object.keys(CATEGORIES)) { tally[catKey] = { min:0, max:0, count:0 }; }
+
+  placedItems.forEach(item => {
+    const catKey = Object.keys(CATEGORIES).find(k => CATEGORIES[k].items.some(i => i.id === item.itemId));
+    if (catKey) {
+      tally[catKey].min += item.itemData.priceMin;
+      tally[catKey].max += item.itemData.priceMax;
+      tally[catKey].count++;
+      totalMin += item.itemData.priceMin;
+      totalMax += item.itemData.priceMax;
+    }
+  });
+
+  // Update total display
+  const totalEl = document.getElementById('budget-total');
+  const prevText = totalEl.textContent;
+  const newText = placedItems.length === 0 ? '$0' : `$${totalMin.toLocaleString()}`;
+  if (prevText !== newText) {
+    totalEl.textContent = newText;
+    totalEl.classList.add('price-flash');
+    setTimeout(() => totalEl.classList.remove('price-flash'), 600);
+  }
+
+  document.getElementById('budget-range').textContent = placedItems.length === 0
+    ? 'Add items to see estimate'
+    : `Range: $${totalMin.toLocaleString()} – $${totalMax.toLocaleString()}`;
+
+  // Bar
+  const maxBudget = 8000;
+  const pct = Math.min(100, (totalMax / maxBudget) * 100);
+  document.getElementById('budget-bar-fill').style.width = pct + '%';
+
+  // Breakdown
+  const breakEl = document.getElementById('budget-breakdown');
+  const catIcons = { desk:'🖥️', chair:'💺', monitor:'🖥', lighting:'💡', accessories:'🎮' };
+  breakEl.innerHTML = Object.keys(CATEGORIES).map(catKey => {
+    const t = tally[catKey];
+    if (t.count === 0) return '';
+    return `<div class="budget-item">
+      <span style="color:rgba(255,255,255,0.6);font-size:0.85rem;">${catIcons[catKey]} ${CATEGORIES[catKey].label} (${t.count})</span>
+      <span style="color:#00d4ff;font-family:'Orbitron',sans-serif;font-size:0.75rem;">$${t.min}–$${t.max}</span>
+    </div>`;
+  }).join('');
+  if (placedItems.length === 0) {
+    breakEl.innerHTML = '<div class="text-xs text-gray-600 font-body text-center py-4">No items added yet</div>';
+  }
+
+  // Update WA link with budget summary
+  const waBtnEl = document.getElementById('design-for-me-btn');
+  const itemNames = placedItems.map(i => i.itemData.name).join(', ');
+  const waMsg = encodeURIComponent(`Hi! I used the 3D Gaming Setups room builder.\n\nMy setup includes: ${itemNames || 'No items selected yet'}\n\nEstimated budget: $${totalMin} – $${totalMax}\n\nCan you help me design this setup?`);
+  waBtnEl.href = `https://wa.me/6288226439743?text=${waMsg}`;
+}
+
+// ===== BUDGET PRESETS =====
+function applyPreset(tier) {
+  clearCanvas();
+  document.querySelectorAll('[id^=preset-]').forEach(b => b.classList.remove('selected'));
+  document.getElementById('preset-' + tier).classList.add('selected');
+
+  const presets = {
+    low: ['desk-basic', 'chair-gaming', 'mon-24', 'light-led', 'acc-kb'],
+    mid: ['desk-l', 'chair-gaming', 'mon-27', 'mon-27', 'light-led', 'light-lamp', 'acc-kb', 'acc-mouse', 'acc-headset'],
+    high: ['desk-standing', 'chair-ergo', 'mon-ultra', 'mon-27', 'light-led', 'light-panel', 'light-ring', 'acc-pc', 'acc-kb', 'acc-mouse', 'acc-headset', 'acc-speaker', 'acc-cam']
+  };
+
+  presets[tier].forEach((itemId, idx) => {
+    setTimeout(() => addItem(itemId), idx * 80);
+  });
+}
+
+// ===== ROOM SLIDERS =====
+['w','l','h'].forEach(axis => {
+  const slider = document.getElementById('slider-' + axis);
+  const valEl = document.getElementById('val-' + axis);
+  const suffix = axis === 'h' ? 'm' : 'm';
+  slider.addEventListener('input', () => {
+    valEl.textContent = slider.value + suffix;
+    updateRoomLabel();
+  });
+});
+
+function updateRoomLabel() {
+  const w = document.getElementById('slider-w').value;
+  const l = document.getElementById('slider-l').value;
+  const h = document.getElementById('slider-h').value;
+  document.getElementById('room-size-label').textContent = `${w}m × ${l}m × ${h}m`;
+}
+
+// ===== INIT =====
+renderItemsList();
+updateBudget();
+</script>
+
+</body>
+</html>
